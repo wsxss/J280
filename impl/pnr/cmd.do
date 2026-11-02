@@ -1,0 +1,18 @@
+-d D:\DeepSeek\Work\J280_AttitudeCtrl\impl\gwsynthesis\J280_AttitudeCtrl.vg
+-p GW2A-55C-PBGA484-8
+-pn GW2A-LV55PG484C8/I7
+-cst D:\DeepSeek\Work\J280_AttitudeCtrl\src\cst\j280.cst
+-cfg D:\DeepSeek\Work\J280_AttitudeCtrl\impl\pnr\device.cfg
+-sdc D:\DeepSeek\Work\J280_AttitudeCtrl\src\sdc\j280.sdc
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-place_option 0
+-route_option 0
+-retiming_resource none
+-clock_route_order 0
+-correct_hold 1
+-route_maxfan 23
+-global_freq 100.000

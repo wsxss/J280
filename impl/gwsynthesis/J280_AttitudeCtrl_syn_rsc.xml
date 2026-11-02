@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="j280_top" Register="287" Alu="149" Lut="649" T_Register="1107(287)" T_Alu="463(149)" T_Lut="2617(649)" T_PADD18="2(0)" T_MULT18X18="5(0)">
+ <SubModule name="adc_inst" Register="49" Alu="13" Lut="65" T_Register="49(49)" T_Alu="13(13)" T_Lut="65(65)"/>
+ <SubModule name="key_inst" Register="23" Lut="39" T_Register="23(23)" T_Lut="39(39)"/>
+ <SubModule name="key2_inst" Register="23" Lut="38" T_Register="23(23)" T_Lut="38(38)"/>
+ <SubModule name="key3_inst" Register="23" Lut="39" T_Register="23(23)" T_Lut="39(39)"/>
+ <SubModule name="encoder_inst" Register="24" Lut="51" T_Register="24(24)" T_Lut="51(51)"/>
+ <SubModule name="pid_pos_inst" Register="286" Alu="137" Lut="764" PADD18="1" MULT18X18="2" T_Register="286(286)" T_Alu="137(137)" T_Lut="764(764)" T_PADD18="1(1)" T_MULT18X18="2(2)"/>
+ <SubModule name="pid_angle_inst" Register="269" Alu="153" Lut="780" PADD18="1" MULT18X18="2" T_Register="269(269)" T_Alu="153(153)" T_Lut="780(780)" T_PADD18="1(1)" T_MULT18X18="2(2)"/>
+ <SubModule name="motor_inst" Register="14" Alu="11" Lut="24" MULT18X18="1" T_Register="14(14)" T_Alu="11(11)" T_Lut="24(24)" T_MULT18X18="1(1)"/>
+ <SubModule name="uart_inst" Register="87" Lut="126" T_Register="109(87)" T_Lut="168(126)">
+  <SubModule name="u_byte_tx" Register="22" Lut="42" T_Register="22(22)" T_Lut="42(42)"/>
+ </SubModule>
+</Module>

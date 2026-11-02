@@ -1,0 +1,88 @@
+//=============================================================================
+//  File        : j280.cst
+//  Brief       : J280 姿态控制物理约束（GW2A-LV55PG484C8/I7）
+//  Note        : 单电机 + 单编码器，电机与编码器都接在 XH1 座上；
+//                引脚按实测接线：PWMB=V14、BIN1=AA17、BIN2=V15、1A=Y20、1B=AA20。
+//                核心板 KEY/LED 位于 1.5V Bank。
+//=============================================================================
+
+//----------------------------- 时钟与复位 -----------------------------
+IO_LOC  "clk_50m" M19;
+IO_PORT "clk_50m" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+
+IO_LOC  "rst_n" AB3;
+IO_PORT "rst_n" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+
+//----------------------------- 按键（低有效，1.5V Bank）----------------
+IO_LOC  "key_sw[0]" T18;    // SW1 启动/停止自动模式
+IO_PORT "key_sw[0]" IO_TYPE=LVCMOS15 PULL_MODE=UP BANK_VCCIO=1.5;
+
+IO_LOC  "key_sw[1]" R18;    // SW2 平衡中平滑步进
+IO_PORT "key_sw[1]" IO_TYPE=LVCMOS15 PULL_MODE=UP BANK_VCCIO=1.5;
+
+IO_LOC  "key_sw[2]" U20;    // SW3 半圈往返循环
+IO_PORT "key_sw[2]" IO_TYPE=LVCMOS15 PULL_MODE=UP BANK_VCCIO=1.5;
+
+// SW4（T20）未使用，已从顶层端口删除
+
+//----------------------------- LED（1.5V Bank）------------------------
+IO_LOC  "led[0]" U18;       // 常亮
+IO_PORT "led[0]" IO_TYPE=LVCMOS15 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.5;
+
+IO_LOC  "led[1]" U19;       // 在窗口内
+IO_PORT "led[1]" IO_TYPE=LVCMOS15 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.5;
+
+IO_LOC  "led[2]" U17;       // 电机出力
+IO_PORT "led[2]" IO_TYPE=LVCMOS15 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.5;
+
+IO_LOC  "led[3]" T17;       // 保留（恒 0）
+IO_PORT "led[3]" IO_TYPE=LVCMOS15 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.5;
+
+//----------------------------- 3PA1030 ADC ---------------------------
+IO_LOC  "adc_clk" G18;
+IO_PORT "adc_clk" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+
+IO_LOC  "adc_oe_n" H20;
+IO_PORT "adc_oe_n" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+
+IO_LOC  "adc_data_in[9]" E19;
+IO_PORT "adc_data_in[9]" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC  "adc_data_in[8]" G17;
+IO_PORT "adc_data_in[8]" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC  "adc_data_in[7]" G19;
+IO_PORT "adc_data_in[7]" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC  "adc_data_in[6]" H19;
+IO_PORT "adc_data_in[6]" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC  "adc_data_in[5]" H18;
+IO_PORT "adc_data_in[5]" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC  "adc_data_in[4]" D19;
+IO_PORT "adc_data_in[4]" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC  "adc_data_in[3]" J19;
+IO_PORT "adc_data_in[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC  "adc_data_in[2]" J20;
+IO_PORT "adc_data_in[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC  "adc_data_in[1]" M21;
+IO_PORT "adc_data_in[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+IO_LOC  "adc_data_in[0]" L21;
+IO_PORT "adc_data_in[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+
+//----------------------------- 串口（9600 上报，K20）-----------------
+IO_LOC  "uart_tx" K20;
+IO_PORT "uart_tx" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+
+//----------------------------- 电机（TB6612 B 通道，XH1）--------------
+IO_LOC  "pwm" V14;          // PWMB
+IO_PORT "pwm" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+
+IO_LOC  "in1" AA17;         // BIN1
+IO_PORT "in1" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+
+IO_LOC  "in2" V15;          // BIN2
+IO_PORT "in2" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8 BANK_VCCIO=3.3;
+
+//----------------------------- 编码器 1（XH1）-------------------------
+IO_LOC  "enc_a" Y20;        // 1A
+IO_PORT "enc_a" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+
+IO_LOC  "enc_b" AA20;       // 1B
+IO_PORT "enc_b" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;

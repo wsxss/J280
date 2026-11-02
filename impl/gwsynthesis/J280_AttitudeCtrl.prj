@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW2A-55C" package="PBGA484" speed="8" partNumber="GW2A-LV55PG484C8/I7"/>
+    <FileList>
+        <File path="D:\DeepSeek\Work\J280_AttitudeCtrl\src\rtl\adc.v" type="verilog"/>
+        <File path="D:\DeepSeek\Work\J280_AttitudeCtrl\src\rtl\encoder.v" type="verilog"/>
+        <File path="D:\DeepSeek\Work\J280_AttitudeCtrl\src\rtl\j280_top.v" type="verilog"/>
+        <File path="D:\DeepSeek\Work\J280_AttitudeCtrl\src\rtl\key_filter.v" type="verilog"/>
+        <File path="D:\DeepSeek\Work\J280_AttitudeCtrl\src\rtl\motor_ctrl.v" type="verilog"/>
+        <File path="D:\DeepSeek\Work\J280_AttitudeCtrl\src\rtl\pid.v" type="verilog"/>
+        <File path="D:\DeepSeek\Work\J280_AttitudeCtrl\src\rtl\uart_report.v" type="verilog"/>
+        <File path="D:\DeepSeek\Work\J280_AttitudeCtrl\src\rtl\uart_tx.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="dsp_style" value="auto"/>
+        <Option type="global_freq" value="100.000"/>
+        <Option type="looplimit" value="2000"/>
+        <Option type="map_option" value="1"/>
+        <Option type="max_fanout" value="1000"/>
+        <Option type="netlist_hierarchy" value="1"/>
+        <Option type="opt_goal" value="auto"/>
+        <Option type="output_file" value="D:\DeepSeek\Work\J280_AttitudeCtrl\impl\gwsynthesis\J280_AttitudeCtrl.vg"/>
+        <Option type="print_all_synthesis_warning" value="0"/>
+        <Option type="ram_rw_check" value="0"/>
+        <Option type="ram_style" value="auto"/>
+        <Option type="rom_style" value="auto"/>
+        <Option type="shift_reg" value="auto"/>
+        <Option type="vcc" value="1.0"/>
+        <Option type="verilog_language" value="verilog-2001"/>
+        <Option type="vhdl_language" value="vhdl-1993"/>
+    </OptionList>
+</Project>

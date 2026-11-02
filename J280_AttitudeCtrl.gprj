@@ -1,0 +1,19 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW2A-55C" pn="GW2A-LV55PG484C8/I7">gw2a55c-005</Device>
+    <FileList>
+        <File path="src/rtl/adc.v" type="file.verilog" enable="1"/>
+        <File path="src/rtl/encoder.v" type="file.verilog" enable="1"/>
+        <File path="src/rtl/j280_top.v" type="file.verilog" enable="1"/>
+        <File path="src/rtl/key_filter.v" type="file.verilog" enable="1"/>
+        <File path="src/rtl/motor_ctrl.v" type="file.verilog" enable="1"/>
+        <File path="src/rtl/pid.v" type="file.verilog" enable="1"/>
+        <File path="src/rtl/uart_report.v" type="file.verilog" enable="1"/>
+        <File path="src/rtl/uart_tx.v" type="file.verilog" enable="1"/>
+        <File path="src/cst/j280.cst" type="file.cst" enable="1"/>
+        <File path="src/sdc/j280.sdc" type="file.sdc" enable="1"/>
+    </FileList>
+</Project>

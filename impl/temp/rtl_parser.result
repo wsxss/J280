@@ -1,0 +1,94 @@
+[
+    {
+        "InstFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/j280_top.v",
+        "InstLine": 1,
+        "InstName": "j280_top",
+        "ModuleFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/j280_top.v",
+        "ModuleLine": 1,
+        "ModuleName": "j280_top",
+        "SubInsts": [
+            {
+                "InstFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/j280_top.v",
+                "InstLine": 60,
+                "InstName": "adc_inst",
+                "ModuleFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/adc.v",
+                "ModuleLine": 1,
+                "ModuleName": "adc"
+            },
+            {
+                "InstFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/j280_top.v",
+                "InstLine": 105,
+                "InstName": "key_inst",
+                "ModuleFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/key_filter.v",
+                "ModuleLine": 1,
+                "ModuleName": "key_filter"
+            },
+            {
+                "InstFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/j280_top.v",
+                "InstLine": 123,
+                "InstName": "key2_inst",
+                "ModuleFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/key_filter.v",
+                "ModuleLine": 1,
+                "ModuleName": "key_filter"
+            },
+            {
+                "InstFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/j280_top.v",
+                "InstLine": 133,
+                "InstName": "key3_inst",
+                "ModuleFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/key_filter.v",
+                "ModuleLine": 1,
+                "ModuleName": "key_filter"
+            },
+            {
+                "InstFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/j280_top.v",
+                "InstLine": 247,
+                "InstName": "encoder_inst",
+                "ModuleFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/encoder.v",
+                "ModuleLine": 2,
+                "ModuleName": "encoder"
+            },
+            {
+                "InstFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/j280_top.v",
+                "InstLine": 368,
+                "InstName": "pid_pos_inst",
+                "ModuleFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/pid.v",
+                "ModuleLine": 1,
+                "ModuleName": "pid"
+            },
+            {
+                "InstFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/j280_top.v",
+                "InstLine": 422,
+                "InstName": "pid_angle_inst",
+                "ModuleFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/pid.v",
+                "ModuleLine": 1,
+                "ModuleName": "pid"
+            },
+            {
+                "InstFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/j280_top.v",
+                "InstLine": 480,
+                "InstName": "motor_inst",
+                "ModuleFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/motor_ctrl.v",
+                "ModuleLine": 1,
+                "ModuleName": "motor_ctrl"
+            },
+            {
+                "InstFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/j280_top.v",
+                "InstLine": 495,
+                "InstName": "uart_inst",
+                "ModuleFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/uart_report.v",
+                "ModuleLine": 1,
+                "ModuleName": "uart_report",
+                "SubInsts": [
+                    {
+                        "InstFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/uart_report.v",
+                        "InstLine": 21,
+                        "InstName": "u_byte_tx",
+                        "ModuleFile": "D:/DeepSeek/Work/J280_AttitudeCtrl/src/rtl/uart_tx.v",
+                        "ModuleLine": 2,
+                        "ModuleName": "uart_tx"
+                    }
+                ]
+            }
+        ]
+    }
+]
